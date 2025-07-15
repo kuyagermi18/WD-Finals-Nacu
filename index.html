@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Online Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./pages/page1/index.html">About Me</a></li>
+                <li><a href="./pages/page2/index.html">Projects</a></li>
+                <li><a href="./pages/page3/index.html">Skills</a></li>
+                <li><a href="./pages/page4/index.html">Resume</a></li>
+                <li><a href="./pages/page5/index.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile fade-in">
+            <img src="your-photo.jpg" alt="My Photo" class="profile-img">
+            <p class="intro">Hi! I'm <strong>[Your Name]</strong>, a passionate developer/designer/student eager to grow and showcase my work through this portfolio.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a> |
+            <a href="#">Help</a> |
+            <a href="#">Social</a>
+        </div>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Fade-in animation on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const fadeEl = document.querySelector('.fade-in');
+            fadeEl.style.opacity = 1;
+            fadeEl.style.transform = 'translateY(0)';
+        });
+    </script>
 </body>
 </html>
