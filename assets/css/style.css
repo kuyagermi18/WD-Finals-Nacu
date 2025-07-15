@@ -57,11 +57,9 @@ header nav ul {
     justify-content: center;
     list-style: none;
     flex-wrap: wrap;
-}
-
-header nav ul li {
-    margin: 0 20px;
-    position: relative;
+    gap: 24px;
+    padding: 0;
+    margin: 0;
 }
 
 header nav ul li a {
@@ -93,7 +91,7 @@ header nav ul li a:hover::after {
 --------------------------------*/
 .profile {
     max-width: 800px;
-    margin: 80px auto;
+    margin: 80px auto 40px;
     padding: 30px;
     text-align: center;
     border-radius: 20px;
@@ -137,6 +135,89 @@ header nav ul li a:hover::after {
 }
 
 /* -------------------------------
+   EXPLORE TITLE
+--------------------------------*/
+.explore-title {
+    font-size: 2.8rem;
+    color: #00ffd5;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 255, 213, 0.4);
+    animation: floatFadeIn 1s ease-in-out;
+}
+
+@keyframes floatFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* -------------------------------
+   SECTION LINKS (4 Boxes)
+--------------------------------*/
+.section-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+.link-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(14px);
+    padding: 30px 25px;
+    border-radius: 16px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 255, 213, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link-box:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 20px rgba(0, 255, 213, 0.4);
+}
+
+.link-box i {
+    margin-bottom: 15px;
+    font-size: 3rem;
+    color: #00ffd5;
+}
+
+.link-box h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.link-box p {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 15px;
+    padding: 0 5px;
+}
+
+.link-box a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #00ffd5;
+    transition: color 0.3s ease;
+}
+
+.link-box a:hover {
+    color: #ffffff;
+}
+
+/* -------------------------------
    FOOTER
 --------------------------------*/
 footer {
@@ -168,10 +249,7 @@ footer {
     header nav ul {
         flex-direction: column;
         align-items: center;
-    }
-
-    header nav ul li {
-        margin: 10px 0;
+        gap: 10px;
     }
 
     .intro {
@@ -182,139 +260,8 @@ footer {
         width: 140px;
         height: 140px;
     }
-}
 
-/* -------------------------------
-   SECTION LINK BOXES
---------------------------------*/
-.section-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 40px;
-    gap: 20px;
-}
-
-.link-box {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    padding: 20px 30px;
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 255, 213, 0.05);
-}
-
-.link-box a {
-    text-decoration: none;
-    color: #00ffd5;
-    font-weight: 600;
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-    transition: color 0.3s ease;
-}
-
-.link-box:hover {
-    transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 0 15px rgba(0, 255, 213, 0.3);
-}
-
-.link-box a:hover {
-    color: #fff;
-}
-
-.explore-title {
-    font-size: 2.8rem;
-    color: #00ffd5;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px rgba(0, 255, 213, 0.4);
-    animation: floatFadeIn 1s ease-in-out;
-}
-
-@keyframes floatFadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.link-box i {
-    margin-right: 8px;
-    color: #fff;
-    font-size: 1.1rem;
-}
-
-.section-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-    padding: 0 20px;
-}
-
-.link-box {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(14px);
-    padding: 30px 25px;
-    border-radius: 16px;
-    width: 250px;
-    text-align: center;
-    color: #fff;
-    box-shadow: 0 0 15px rgba(0, 255, 213, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.link-box:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 0 20px rgba(0, 255, 213, 0.4);
-}
-
-.big-icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    color: #00ffd5;
-}
-
-.link-box h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.link-box p {
-    font-size: 0.95rem;
-    color: #ccc;
-    margin-bottom: 15px;
-    padding: 0 5px;
-}
-
-.link-box a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #00ffd5;
-    transition: color 0.3s ease;
-}
-
-.link-box a:hover {
-    color: #ffffff;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
     .section-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .link-box {
-        width: 90%;
+        grid-template-columns: 1fr;
     }
 }
