@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Online Portfolio</title>
+
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Font Awesome (stable CDN version) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="./assets/img/bg.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Header -->
     <header>
         <nav>
             <ul>
@@ -22,13 +36,25 @@
         </nav>
     </header>
 
+    <!-- Main Section -->
     <main>
         <section class="profile fade-in">
-            <img src="your-photo.jpg" alt="My Photo" class="profile-img">
-            <p class="intro">Hi! I'm <strong>[Your Name]</strong>, a passionate developer/designer/student eager to grow and showcase my work through this portfolio.</p>
+            <img src="./assets/img/2x2.jpg" alt="My Photo" class="profile-img">
+            <p class="intro">Hi! I'm <strong>Germi James Nacu</strong>, a FEU Tech BSIT AGD student eager to grow and showcase my work through this portfolio.</p>
+
+            <h2 class="explore-title">Explore My Portfolio</h2>
+
+            <div class="section-links">
+                <div class="link-box"><a href="./pages/page1/index.html"><i class="fas fa-user"></i> About Me</a></div>
+                <div class="link-box"><a href="./pages/page2/index.html"><i class="fas fa-briefcase"></i> Projects</a></div>
+                <div class="link-box"><a href="./pages/page3/index.html"><i class="fas fa-cogs"></i> Skills</a></div>
+                <div class="link-box"><a href="./pages/page4/index.html"><i class="fas fa-file-alt"></i> Resume</a></div>
+                <div class="link-box"><a href="./pages/page5/index.html"><i class="fas fa-envelope"></i> Contact</a></div>
+            </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-links">
             <a href="#">Privacy Policy</a> |
@@ -36,15 +62,14 @@
             <a href="#">Help</a> |
             <a href="#">Social</a>
         </div>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 Germi James Nacu. All rights reserved.</p>
     </footer>
 
+    <!-- Fade-in Animation Script -->
     <script>
-        // Fade-in animation on load
         window.addEventListener('DOMContentLoaded', () => {
             const fadeEl = document.querySelector('.fade-in');
-            fadeEl.style.opacity = 1;
-            fadeEl.style.transform = 'translateY(0)';
+            fadeEl.classList.add('loaded');
         });
     </script>
 </body>
